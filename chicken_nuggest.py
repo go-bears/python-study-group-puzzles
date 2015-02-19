@@ -33,4 +33,4 @@ assert chicken(133) is True
 assert chicken(45) is True
 assert chicken(28) is False
 assert chicken(16) is False
-assert chicken(15) is T
+assert chicken(15) is True
