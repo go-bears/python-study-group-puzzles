@@ -82,9 +82,65 @@ def squares(i):
 """calculate sum of squares of integers i < n in one line using built-in function & list comprehension """
 squares2 = sum( [i**2 for i in range(10)])
  
-print squares2
+# print squares2
+
+"""
+Python  allows  negative  integers  to  be  used  as  indices 
+into  a  sequence, such as a string. If string s has length n
+and expression s[k] is used for index -n<= k<0, what is the equivalent 
+index j>= 0 such that s[j] references the same element?
+"""
+
+string = "string"
+index = range(len(string)) #create indices with range drawn from length of string
+backwards_index=(range(-1*(len(string)), 0)) # create indices range that starts from negative of length of string & counts up to -1
+
+for i in index:
+    print string[i]
+
+for j in backwards_index:
+    print string[j]
+
+"""
+What  parameters  should  be  sent  to  the
+range constructor,  to  produce  a
+range with values 50, 60, 70, 80?
+"""
+#range(starting #, ending#, interval between integers in range
+print range(50, 90, 10)
+
+"""
+What  parameters  should  be  sent  to  the
+range constructor,  to  produce  a
+range with values 8, 6, 4, 2, 0,
+-2, -4,-6,-8?
+"""
+#range(starting #, ending#, interval between integers in range
+print range(8, -9, -2)
 
 
+"""
+Demonstrate how to use Python's list comprehension syntax to produce the list
+[1, 2, 4, 8, 16, 32, 64, 128, 256].
+"""
+#sooo, hacky-y!!
+
+doubles = [int(i*2) for i in [.5, 1, 2, 4, 8, 32, 64, 128 ] ]
+print doubles
 
 
+"""
+Python's random module includes a function choice(data) that returns a random  element  from  a  non-empty  sequence.   
+The random module  includes a more basic function randrange , with parameterization similar to
+the built-in range function, that return  a random  choice  from  the given range.  Using only the
+randrange function, implement your own version of the choice function.
+(in other words, use the random.randrange() function, which creates a range & selects a number at the same time)
+"""
+
+def random_range():
+    import random
+    x = random.randrange(1, 100, 3)
+    return x
+    
+print random_range()
     
