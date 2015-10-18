@@ -139,7 +139,7 @@ randrange function, implement your own version of the choice function.
 
 def random_range():
     import random
-    x = random.randrange(1, 100, 3)
+    x = random.randrange(1, 150, 3)
     return x
     
 print random_range()
