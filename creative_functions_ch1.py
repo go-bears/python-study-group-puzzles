@@ -16,6 +16,12 @@ for i in reverse_index:
     yx.append(new_list[i])
 
 #print yx
+xy = [0, 2, 6, 12, 20, 30, 42, 56, 72, 90]
+reverse_index = range(-1, -1*(len(xy)+1), -1)
+#last element is new_list[-1], set range to (-1, -11, and increment list by -1)
+#solution using list comprehension style        
+xx = [xy[i] for i in reverse_index]
+print xx
         
 
 
