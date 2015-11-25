@@ -21,53 +21,64 @@ learning goals: abstraction, chaining functions, return vs. print statements, ca
 
 """
 import time
+from itertools import permutations, combinations
+import random
 
-bricks = [ " ", "[]", "[__]", "[____]", "[______]" ]
+bricks = [ "[]", "[__]", "[____]", "[______]" ]
 
 
 
-def row1(brick4, mortar): 
-    mortar = bricks[0]  #sample code, you should replace it
-    brick4 = bricks[4]  #sample code, you can replace it
-    row1 = (mortar + brick4 + mortar) * 3 #sample code, you can replace it
-    brick2 = bricks[2]
-    return row1
+# def row1(brick4, mortar): 
+#     mortar = bricks[0]  #sample code, you should replace it
+#     brick4 = bricks[4]  #sample code, you can replace it
+#     row1 = (mortar + brick4 + mortar) * 3 #sample code, you can replace it
+#     brick2 = bricks[2]
+#     return row1
     
-def row2(mortar, brick2):
-    mortar = bricks[0] #sample code, you can replace b/c rows don't align right
-    brick2 = bricks[2]
-    row2 = (brick2 + mortar ) * 6
-    return row2
+# def row2(mortar, brick2):
+#     mortar = bricks[0] #sample code, you can replace b/c rows don't align right
+#     brick2 = bricks[2]
+#     row2 = (brick2 + mortar ) * 6
+#     return row2
 
-def row3():
-    #do something
-    return row3
+# def row3():
+#     #do something
+#     return row3
     
 
-def row4():
-    #do something
-    return row3
+# def row4():
+#     #do something
+#     return row3
 
-def row5():
-     #do something
-    return row3
+# def row5():
+#      #do something
+#     return row3
 
 
 
-def small_wall():
-    print row1(bricks[3], bricks[0])
-    time.sleep(1)
-    print row2(bricks[0], bricks[2])
-    time.sleep(1)
-    #call row function with relevant argument(s)
-    time.sleep(1)
-    #call row function with relevant argument(s)
-    time.sleep(1)
-    #call row function with relevant argument(s)
+# def small_wall():
+#     print row1(bricks[3], bricks[0])
+#     time.sleep(1)
+#     print row2(bricks[0], bricks[2])
+#     time.sleep(1)
+#     #call row function with relevant argument(s)
+#     time.sleep(1)
+#     #call row function with relevant argument(s)
+#     time.sleep(1)
+#     #call row function with relevant argument(s)
 
     
-small_wall()
+# small_wall()
 
+
+def big_wall(bricks):
+    for item in range(6):
+        random.shuffle(bricks)
+        print "".join(bricks)
+        
+
+
+big_wall(bricks)
     
 
 """
