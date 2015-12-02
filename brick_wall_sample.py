@@ -33,23 +33,32 @@ def row1(brick3, mortar):
     row1 = (mortar + brick3 + mortar)  #sample code, you can replace it
     return row1
     
+    
 def row2(brick2,brick1):
     brick2 = bricks[2]
     brick1 = bricks[1]
     row2 = brick2 + brick1
     return row2
 
-def row3():
+def row3(brick1,mortar):
     #do something
+    brick1 = bricks[1]
+    mortar = bricks[0]
+    row3 = (brick1 * 2) + mortar
     return row3
-    
 
-def row4():
+def row4(brick3,mortar):
     #do something
+    brick3 = bricks[3]
+    mortar = bricks[0]
+    row4 = mortar + brick3 
     return row4
 
-def row5():
+def row5(brick3, mortar):
      #do something
+    brick3 = bricks[3]
+    mortar = bricks[0]
+    row5 =  brick3 + mortar
     return row5
 
 
@@ -60,15 +69,19 @@ def small_wall():
     print row2(bricks[2], bricks[1])
     time.sleep(1)
     #call row function with relevant argument(s)
+    print row3(bricks[1],bricks[0])
     time.sleep(1)
     #call row function with relevant argument(s)
+    print row4(bricks[3],bricks[0])
     time.sleep(1)
     #call row function with relevant argument(s)
+    print row5(bricks[3], bricks[0])
 
     
 small_wall()
 
 
+#automate brick wall with for loop & shuffle
 def big_wall(bricks):
     for item in range(6):
         random.shuffle(bricks)
@@ -76,7 +89,7 @@ def big_wall(bricks):
         
 
 
-#big_wall(bricks)
+big_wall(bricks)
     
 
 """
